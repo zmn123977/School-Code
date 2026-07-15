@@ -1,0 +1,61 @@
+/* 重置浏览器默认样式，消除兼容性差异 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Microsoft YaHei", sans-serif;
+}
+
+/* 主题色变量：后续修改颜色只需改这里，无需逐个页面调整 */
+:root {
+  --primary: #42b983; /* 主色调（绿色） */
+  --blue: #1890ff;    /* 辅助色（蓝色，用于导入等按钮） */
+  --red: #ff4d4f;     /* 危险色（红色，用于删除按钮） */
+  --gray: #dcdcdc;    /* 边框灰色 */
+  --bg: #fafafa;      /* 页面背景色 */
+  --card-bg: #fff;    /* 卡片背景色 */
+}
+
+/* 通用按钮样式：统一尺寸和外观，避免每个页面重复写样式 */
+.btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: opacity 0.2s; /*  hover 过渡效果，更丝滑 */
+}
+
+.btn:hover {
+  opacity: 0.9; /*  hover 时略暗，提升交互感知 */
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: #fff;
+}
+
+.btn-blue {
+  background-color: var(--blue);
+  color: #fff;
+}
+
+.btn-danger {
+  background-color: var(--red);
+  color: #fff;
+}
+
+.btn-default {
+  background-color: var(--card-bg);
+  border: 1px solid var(--gray);
+  color: #333;
+}
+
+/* 通用卡片样式：统一页面中的查询区、表格区样式 */
+.card {
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  padding: 15px 20px;
+  margin-bottom: 20px;
+}
